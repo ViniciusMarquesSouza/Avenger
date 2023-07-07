@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Brasil Movies</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title> Preencha o formulário </title>
+    <script src="funcoes.js"></script>
+    <link rel="stylesheet" type="text/css" href="./style (2).css">
+</head>
+<body>
+     <!--Navbar-->
+     <nav class="navbar col-12 m-auto position-fixed navbar-expand-lg bg-dark navbar-dark opacity-75" style="z-index: 999;">
+        <img src="../imagens/logo marvel.png" alt="Bootstrap" width="100" height="45">
+      </a>
+        <div class="container-fluid col-11 m-auto">
+          <a class="navbar-brand" href="#">Disney+</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"  href="../empresa.html">Empresa</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../produtos.html">Produto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../login.html">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../cadastro/cadCliente.html">Cadastro</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Contato
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Contato</a></li>
+                  <li><a class="dropdown-item" href="#">Trabalhe conosco</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../faq.html">Faq</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled"></a>
+              </li>
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+      <br>
+      <br>
+      <br>
+    <form name="cadCliente" onsubmit="return validar()" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome" placeholder="Digite seu nome" maxlength="60" required>
+        <br>
+        <label for="sobrenome">Último nome:</label>
+        <input type="text" name="sobrenome" id="sobrenome" placeholder="Digite seu sobrenome" maxlength="60" required>
+        <br>
+        <label for="dataNascimento">Data de nascimento:</label>
+        <input type="date" name="dataNascimento" id="dataNascimento" min="1900-01-01" max="2020-12-31" required>
+        <br>
+        <label for="cpf">CPF:</label>
+        <input type="text" name="cpf" id="cpf" placeholder="000.000.000-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required>
+        <br>
+        <label for="telefone">Telefone celular:</label>
+        <input type="tel" name="telefone" id="telefone" placeholder="(00)0000-0000" pattern="\(\d{2}\)\d{4,5}-\d{4}" required>
+        <br>
+        <label for="telefone">Telefone comercial :</label>
+        <input type="tel" name="telefone" id="telefone" placeholder="(00)0000-0000" pattern="\(\d{2}\)\d{4,5}-\d{4}" required>
+        <br>
+        <label for="cep">CEP:</label>
+        <input type="text" name="cep" id="cep" placeholder="00000-000" pattern="\d{5}-\d{3}" required>
+        <br>
+        <label for="rua">Rua:</label>
+        <input type="text" name="rua" id="rua" placeholder="Digite sua rua" maxlength="50" required>
+        <br>
+        <label for="bairro">Bairro:</label>
+        <input type="text" name="bairro" id="bairro" placeholder="Digite seu bairro" maxlength="30" required>
+        <br>
+        <label for="numero">Número:</label>
+        <input type="number" name="numero" id="numero" placeholder="Digite seu número" required>
+        <br>
+        <label for="complemento">Complemento:</label>
+        <input type="text" name="complemento" id="complemento" placeholder="Digite seu complemento" maxlength="30">
+        <br>
+        <label for="cidade">Cidade:</label>
+        <input type="text" name="cidade" id="cidade" placeholder="Digite sua cidade" maxlength="40" required>
+        <br>
+        <label for="uf">Estado:</label>
+        <input type="text" name="uf" id="uf" placeholder="Digite seu estado" maxlength="40" required>
+        <br>
+        <label for="email">E-mail:</label>
+        <input type="email" name="email" id="email" placeholder="Digite seu e-mail " required>
+        <br>
+        <br>
+        <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Enviar
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Enviado</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Cadastro confirmado
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Confirmar</button>
+        <button class="btn btn-primary bg-light">
+          <a href="../login.html" target="_blank">
+            Login
+          </a>
+      </div>
+    </div>
+  </div>
+</div>
+        </form>
+        <hr style="color: white;">
+    <br>
+    <br>
+    <div class="col-11 m-auto">
+      <h2 class="text-center" style="color:white">Contato</h2>
+       <div class="text-center">
+      <a href="http//"><i class="fa-brands fa-whatsapp" style="color: white; font-size: 50px;"></i></a>
+      <a href="http//"><i class="fa-brands fa-instagram" style="color: white; font-size: 50px;"></i></a>
+      <a href="http//"><i class="fa-brands fa-square-facebook" style="color: white; font-size: 50px;"></i></a>
+      <a href="http//"><i class="fa-brands fa-pinterest" style="color: white; font-size: 50px;"></i></a>
+      <a href="http//"><i class="fa-brands fa-tiktok" style="color: white; font-size: 50px;"></i></a>
+      </div>
+  </div>
+  <br>
+    <br>
+    <hr style="color: white;">
+    <h2 class="text-center" style="color:white">copyright ©</h2>
+    <hr style="color: white;">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+        </body>
+        </html>
